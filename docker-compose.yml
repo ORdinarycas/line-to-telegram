@@ -1,0 +1,16 @@
+version: "3.6"
+services:
+  postgres:
+    image: postgres:13.5
+    environment:
+      POSTGRES_USER: postgres1216
+      POSTGRES_PASSWORD: 20211216
+      POSTGRES_DB: line_bridge
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8020:8080
